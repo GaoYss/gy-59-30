@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 import {
   CalendarCheck,
   ClipboardList,
+  Download,
   FileText,
   RotateCcw,
   SlidersHorizontal
@@ -10,6 +11,7 @@ import {
 
 import AppointmentView from './views/AppointmentView.vue'
 import ExamView from './views/ExamView.vue'
+import ExportView from './views/ExportView.vue'
 import ScoresView from './views/ScoresView.vue'
 import MakeupView from './views/MakeupView.vue'
 import RulesView from './views/RulesView.vue'
@@ -19,7 +21,8 @@ const navItems = [
   { key: 'exam', label: '模拟考试', icon: ClipboardList, component: ExamView },
   { key: 'scores', label: '成绩查询', icon: FileText, component: ScoresView },
   { key: 'makeups', label: '补考管理', icon: RotateCcw, component: MakeupView },
-  { key: 'rules', label: '约考规则', icon: SlidersHorizontal, component: RulesView }
+  { key: 'rules', label: '约考规则', icon: SlidersHorizontal, component: RulesView },
+  { key: 'export', label: '数据导出', icon: Download, component: ExportView }
 ]
 
 const activeKey = ref('appointments')
